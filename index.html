@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Watch Every NCAAF Game Live | Stream</title>
+  <meta name="description" content="Watch every NCAAF game live. Uninterrupted coverage, 500+ channels including 78+ sports. 7-day money-back guarantee. Join now." />
+  <meta name="theme-color" content="#0b0f14" />
+  <style>
+    :root{
+      --bg:#0b0f14;
+      --text:#f3f6fb;
+      --muted:#a9b3c4;
+      --accent:#32d17d;
+      --accent-2:#13a95a;
+      --cta:#14b866;
+      --card:#0f1520;
+      --border:rgba(255,255,255,.08);
+      --radius:14px;
+      --shadow:0 12px 30px rgba(0,0,0,.38);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;line-height:1.45}
+    a{color:inherit;text-decoration:none}
+    .wrap{max-width:1100px;margin:0 auto;padding:20px}
+
+    /* HERO */
+    header.hero{
+      position:relative;overflow:hidden;isolation:isolate;
+      border-bottom:1px solid var(--border);
+      background:
+        radial-gradient(1200px 500px at 30% -20%, rgba(25,66,146,.35), transparent 60%),
+        radial-gradient(1000px 500px at 80% -40%, rgba(19,169,90,.25), transparent 60%),
+        linear-gradient(180deg, #0b0f14 0%, #0b0f14 65%, #0c1118 100%);
+    }
+    .hero::after{
+      content:"";position:absolute;inset:-20% -10%;
+      background: conic-gradient(from 0deg, rgba(50,209,125,.08), rgba(25,66,146,.06), rgba(50,209,125,.08));
+      filter: blur(60px);opacity:.7;pointer-events:none;z-index:-1;
+      animation: spin 24s linear infinite;
+    }
+    @keyframes spin{to{transform:rotate(1turn)}}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center;padding:24px 0}
+
+    h1{font-size:clamp(28px,4.2vw,50px);margin:6px 0 10px;letter-spacing:.5px}
+    .kicker{display:inline-block;font-weight:700;font-size:14px;color:#9adabb;text-transform:uppercase;letter-spacing:.12em;background:rgba(50,209,125,.1);border:1px solid rgba(50,209,125,.35);padding:6px 10px;border-radius:999px}
+    .points{margin:14px 0 24px;padding:0;list-style:none}
+    .points li{margin:10px 0;padding-left:28px;position:relative;color:var(--muted)}
+    .points li:before{content:"•";position:absolute;left:6px;top:-2px;font-size:28px;color:var(--accent)}
+
+    /* CTA CARD */
+    .cta-card{
+      background:linear-gradient(180deg, #0f1520 0%, #0d131d 100%);
+      border:1px solid var(--border);border-radius:var(--radius);
+      padding:18px;box-shadow:var(--shadow);
+      transform:translateY(8px);opacity:0;animation: fadeUp 800ms ease-out 140ms forwards;
+    }
+    .price-badge{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border-radius:10px;background:#0e171f;border:1px solid var(--border);font-weight:600}
+    .price-badge .now{color:#9adabb}
+    .timer{display:flex;gap:10px;margin:14px 0 12px}
+    .time-box{background:#0c141c;border:1px solid var(--border);border-radius:12px;padding:8px 10px;text-align:center;min-width:58px;box-shadow: inset 0 0 0 1px rgba(255,255,255,.02)}
+    .time-box .num{font-weight:800;font-size:22px}
+    .time-box .lab{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em}
+    .cta{
+      display:inline-flex;align-items:center;justify-content:center;gap:10px;width:100%;
+      padding:14px 18px;border-radius:12px;background:linear-gradient(180deg, var(--cta), var(--accent-2));
+      color:#052b17;font-weight:800;border:none;box-shadow:0 10px 30px rgba(20,184,102,.45);cursor:pointer;font-size:16px;
+      position:relative;overflow:hidden;transform:translateZ(0);
+      transition:transform .2s ease;
+    }
+    .cta::after{
+      content:"";position:absolute;inset:0;
+      background:linear-gradient(120deg, rgba(255,255,255,.0) 30%, rgba(255,255,255,.18) 50%, rgba(255,255,255,.0) 70%);
+      transform:translateX(-120%);animation: shine 3s ease-in-out infinite;pointer-events:none;
+    }
+    .cta:hover{transform:translateY(-1px)}
+    .cta:active{transform:translateY(0) scale(.98)}
+    @keyframes shine{50%{transform:translateX(0)} 100%{transform:translateX(120%)}}
+
+    /* SECTION */
+    .section{padding:28px 0}
+    .section h2{font-size:clamp(22px,3.2vw,32px);margin:0 0 10px}
+
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:var(--shadow);
+      transform:translateY(14px) scale(.98);opacity:0;
+    }
+    .card.show{animation: fadeUp 700ms cubic-bezier(.2,.75,.2,1) forwards}
+    .card:hover{transform:translateY(-4px) scale(1.01);transition:transform .25s ease}
+    .plan-title{font-weight:800;font-size:20px;margin:0 0 8px}
+    .plan-copy{color:var(--muted);font-size:14px;margin:0 0 16px}
+    .price{font-size:28px;font-weight:900;letter-spacing:.02em}
+    .subscribe{margin-top:14px}
+    .subscribe a{display:flex;align-items:center;justify-content:center;width:100%;padding:12px;border-radius:12px;background:#1a6d42;color:#eafff5;font-weight:800;border:1px solid rgba(234,255,245,.2);transition:transform .2s ease, filter .2s ease}
+    .subscribe a:hover{filter:brightness(1.05);transform:translateY(-1px)}
+
+    .guarantee{display:flex;gap:12px;align-items:flex-start;margin-top:8px;color:var(--muted);font-size:14px;opacity:0;transform:translateY(10px)}
+    .guarantee.show{animation: fadeUp 700ms ease forwards 100ms}
+    .shield{width:18px;height:18px;border-radius:4px;background:linear-gradient(180deg,#21cc7a,#0e7f4c);display:inline-block;margin-top:2px;box-shadow:0 2px 10px rgba(33,204,122,.35);animation:pulse 2.4s ease-in-out infinite}
+    @keyframes pulse{0%,100%{filter:saturate(1)}50%{filter:saturate(1.25)}}
+
+    footer{border-top:1px solid var(--border);padding:22px 0 40px;color:var(--muted);font-size:13px}
+
+    /* Reveal animation */
+    @keyframes fadeUp{from{opacity:0;transform:translateY(16px) scale(.98)} to{opacity:1;transform:translateY(0) scale(1)}}
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce){
+      .cta::after, .hero::after{animation:none}
+      .card, .cta-card, .guarantee{opacity:1;transform:none;animation:none}
+      .subscribe a, .card:hover, .cta:hover, .cta:active{transition:none}
+    }
+
+    /* Mobile */
+    @media (max-width: 900px){
+      .hero-inner{grid-template-columns:1fr}
+      .cards{grid-template-columns:1fr}
+      .wrap{padding:16px}
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap hero-inner">
+      <div class="copy reveal" style="animation-delay:40ms">
+        <span class="kicker">Watch every NCAAF game live</span>
+        <h1>Stream Every NCAAF Game — <span style="color:#9adabb">LIVE</span></h1>
+        <ul class="points">
+          <li class="reveal" style="animation-delay:120ms">Takes only 1 minute to get access. Join now!</li>
+          <li class="reveal" style="animation-delay:200ms">Uninterrupted coverage of 500+ TV channels (incl. 78+ sports).</li>
+          <li class="reveal" style="animation-delay:280ms">Watch NCAAF, NCAAM, NFL live — now for less!</li>
+          <li class="reveal" style="animation-delay:360ms">7-day money-back guarantee. 24×7 customer support.</li>
+        </ul>
+      </div>
+      <div>
+        <div class="cta-card">
+          <div class="price-badge">
+            <span>Stream Every NCAAF Game Live for</span>
+            <span class="now">Only $4.99</span>
+          </div>
+          <div class="timer" aria-live="polite">
+            <div class="time-box"><div id="t-hours" class="num">06</div><div class="lab">Hour</div></div>
+            <div class="time-box"><div id="t-mins" class="num">00</div><div class="lab">Minute</div></div>
+            <div class="time-box"><div id="t-secs" class="num">00</div><div class="lab">Second</div></div>
+          </div>
+          <a class="cta" href="https://trusthubmedia.com/app/aff/go/unzmnx?i=7&keyword=michigan" target="_blank" rel="nofollow noopener" aria-label="Subscribe now for $4.99">
+            SUBSCRIBE $4.99
+          </a>
+          <p class="disclaimer">Watch every game, every week LIVE, including college football regular season, playoffs and national championship — now for less.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="section">
+      <h2 class="reveal">Pick a Plan</h2>
+      <div class="cards">
+        <article class="card reveal" style="animation-delay:60ms">
+          <div>
+            <h3 class="plan-title">1 Month Package</h3>
+            <p class="plan-copy">Watch every college football game &amp; All Sports Pass. Access to 500+ channels from around the world + sports coverage for only $19.99. Enjoy more channels than cable or satellite combined — for a one-month fee that's less than your weekly cable bill.</p>
+          </div>
+          <div>
+            <div class="price">$19.99</div>
+            <div class="subscribe">
+              <a href="https://trusthubmedia.com/app/aff/go/unzmnx?i=7&keyword=michigan" target="_blank" rel="nofollow noopener" aria-label="Subscribe to 1 month for $19.99">SUBSCRIBE</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" style="animation-delay:140ms">
+          <div>
+            <h3 class="plan-title">15 Days Package</h3>
+            <p class="plan-copy">Get access to every NCAAF game with 15 days of full &amp; unlimited coverage in HD! Includes the biggest game of the year, locker room pre-game &amp; post-game interviews, pro football, and other major sports — all for just $9.99 for 15 days.</p>
+          </div>
+          <div>
+            <div class="price">$9.99</div>
+            <div class="subscribe">
+              <a href="https://trusthubmedia.com/app/aff/go/unzmnx?i=7&keyword=michigan" target="_blank" rel="nofollow noopener" aria-label="Subscribe to 15 days for $9.99">SUBSCRIBE</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="card reveal" style="animation-delay:220ms">
+          <div>
+            <h3 class="plan-title">7 Days Package</h3>
+            <p class="plan-copy">Access to college football games with 7 days of full &amp; unlimited coverage — including locker room pre-game and post-game interviews and all other sports for only $4.99 for 7 days.</p>
+          </div>
+          <div>
+            <div class="price">$4.99</div>
+            <div class="subscribe">
+              <a href="https://trusthubmedia.com/app/aff/go/unzmnx?i=7&keyword=michigan" target="_blank" rel="nofollow noopener" aria-label="Subscribe to 7 days for $4.99">SUBSCRIBE</a>
+            </div>
+          </div>
+        </article>
+      </div>
+      <div class="guarantee">
+        <span class="shield" aria-hidden="true"></span>
+        <p>7-Day Money-Back Guarantee. Secure checkout. Cancel anytime.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="wrap">
+    <p>© <span id="year"></span> Live Sports Network. All rights reserved. This site is a promotional landing page. All trademarks are the property of their respective owners.</p>
+  </footer>
+
+  <script>
+    // Countdown: persist end time for 6 hours using localStorage
+    (function(){
+      const HOURS = 6; const KEY = "promoEndAt"; const now = Date.now();
+      let end = Number(localStorage.getItem(KEY) || 0);
+      if (!end || end < now) { end = now + HOURS*60*60*1000; localStorage.setItem(KEY, String(end)); }
+      const $h = document.getElementById("t-hours");
+      const $m = document.getElementById("t-mins");
+      const $s = document.getElementById("t-secs");
+      function pad(n){return String(n).padStart(2,"0")}
+      function tick(){
+        const t = Math.max(0, end - Date.now());
+        const hrs = Math.floor(t/36e5);
+        const mins = Math.floor((t%36e5)/6e4);
+        const secs = Math.floor((t%6e4)/1e3);
+        $h.textContent = pad(hrs); $m.textContent = pad(mins); $s.textContent = pad(secs);
+        if(t<=0){ const next = Date.now()+HOURS*60*60*1000; localStorage.setItem(KEY, String(next)); end = next; }
+      }
+      tick(); setInterval(tick, 1000);
+    })();
+
+    // Scroll reveal
+    const observer = new IntersectionObserver((entries)=>{
+      for(const e of entries){
+        if(e.isIntersecting){
+          e.target.classList.add('show');
+          e.target.style.animation = e.target.style.animation || 'fadeUp 650ms ease-out forwards';
+          observer.unobserve(e.target);
+        }
+      }
+    }, {threshold:.15});
+    document.querySelectorAll('.reveal, .card, .guarantee').forEach(el=>observer.observe(el));
+
+    // Stagger bullet items
+    document.querySelectorAll('.points .reveal').forEach((li,i)=>{
+      li.style.opacity=0; li.style.transform='translateY(12px)';
+      li.style.animation=`fadeUp 600ms ease forwards ${120+80*i}ms`;
+    });
+
+    // Set year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
